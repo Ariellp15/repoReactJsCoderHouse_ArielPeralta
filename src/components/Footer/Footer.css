@@ -1,0 +1,7 @@
+.Footer{
+    background-color: grey;
+    display: flex;
+    justify-content: cenrter;
+    align-items: center;
+    min-height: 15vh,
+}
