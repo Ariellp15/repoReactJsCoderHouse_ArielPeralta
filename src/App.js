@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import CardWidget from './components/CardWidget/CardWidget';
 import Footer from './components/Footer/Footer';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemListContainerB from './components/ItemListContainer/ItemListContainerB';
 import ItemCount from './components/ItemCount/ItemCount';
 
 function App() {
@@ -11,8 +12,9 @@ function App() {
     <div>
       <header>
         <div>
-        <Header title='Header' subtitle='Subtitulo' />
-        <NavBar />  
+        <Header title='Enjoy your favorite Harry Potter characters' subtitle='Find each character in this exciting story and discover their main characteristics' />
+        <NavBar />
+        <ItemListContainerB />  
         <ItemListContainer/>
           <div className="Cards-Container">
             <div>

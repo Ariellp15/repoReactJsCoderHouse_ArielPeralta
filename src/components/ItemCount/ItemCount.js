@@ -2,7 +2,7 @@ import React from 'react'
 import './ItemCount.css'
 
 function ItemCount() {
-    const [stockItems, setStockItems] = React.useState (0);
+    const [stockItems, setStockItems, initial = 0 , maximStock = 5] = React.useState (0);
 
     let onAdd = () => {
         setStockItems (stockItems + 1)
@@ -12,12 +12,12 @@ function ItemCount() {
         setStockItems (stockItems - 1)
     };
 
-    if (stockItems <1) {
+    if (stockItems <= initial) {
         onSubstract = () => {
             setStockItems (stockItems)            
         }
     }
-    if (stockItems >=5) {
+    if (stockItems >= maximStock) {
         onAdd = () => {
             setStockItems (stockItems)            
         }
