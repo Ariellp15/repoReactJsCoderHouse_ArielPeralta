@@ -1,6 +1,8 @@
 import React from 'react'
 import { Card, Image } from 'semantic-ui-react'
 import ItemCount from '../ItemCount/ItemCount'
+import './ItemList.css'
+import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer'
 
 const ItemList = ({data}) => (
     <Card>
@@ -11,11 +13,13 @@ const ItemList = ({data}) => (
           <span className='date'> {data.dateOfBirth} </span>
         </Card.Meta>
         <Card.Description>
-          {data.house} {data.ancestry} {data.species}
+        <p>House: {data.house}</p>
+        <p>Eye Colour: {data.eyeColour} </p>
+        <p>Ancestry: {data.ancestry}</p>
         </Card.Description>
       </Card.Content>
+      <ItemDetailContainer/>
       <ItemCount/>
-
     </Card>
   )
   
