@@ -1,7 +1,10 @@
 .Footer{
-    background-color: grey;
+    background-color: black;
     display: flex;
     justify-content: cenrter;
     align-items: center;
     min-height: 15vh,
+}
+h4{
+    color: white;
 }

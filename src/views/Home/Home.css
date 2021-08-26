@@ -1,0 +1,12 @@
+.Home{
+    padding: 25px;
+    text-align: center;
+    background: black;
+    background: linear-gradient(
+        90deg,
+        rgba (1,41,1,1) 48%,
+        rgba (1,36,0,1) 100%,
+        rgba (1,31,1,1) 100%,
+        rgba (1,13,0,1) 100%
+    );
+}

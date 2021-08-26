@@ -10,12 +10,12 @@ const ItemList = ({data}) => (
       <Card.Content>
         <Card.Header> {data.name} </Card.Header>
         <Card.Meta>
-          <span className='date'> {data.dateOfBirth} </span>
+          <span className='date'> {data.status} </span>
         </Card.Meta>
         <Card.Description>
-        <p>House: {data.house}</p>
-        <p>Eye Colour: {data.eyeColour} </p>
-        <p>Ancestry: {data.ancestry}</p>
+        <p>Species: {data.species}</p>
+        <p>Type: {data.type} </p>
+        <p>Gender: {data.gender}</p>
         </Card.Description>
       </Card.Content>
       <ItemDetailContainer/>

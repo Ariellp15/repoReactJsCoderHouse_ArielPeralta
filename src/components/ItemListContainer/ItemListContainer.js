@@ -3,7 +3,7 @@ import './ItemListContainer.css'
 import { useEffect, useState } from 'react'
 import ItemList from '../ItemList/ItemList'
 import axios from 'axios';
-import Loading from '../Loading/Loading';
+import {Link} from 'react-router-dom';
 
 const ItemListContainer = () => {
     const [characters, setCharacters] = useState([]);
@@ -12,21 +12,24 @@ const ItemListContainer = () => {
 
 
     useEffect (() =>{
-        axios(
-            'http://hp-api.herokuapp.com/api/characters'
-            )
-            .then((res) => setCharacters(res.data));
+        axios('https://rickandmortyapi.com/api/character/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18').then((res) =>
+         setCharacters(res.data)
+         );
     }, []);
+
     return (
-        <div className="ItemListContainer GridArea">
-        <Loading/>
-        {characters.map((characters) =>{return ((<ItemList key={characters.actor} data={characters} />))})} 
+        <div className='ItemListContainer GridArea'>
+        {characters.map((characters) =>{
+            return (
+                <div key={characters.id}>
+                    <Link to={`/detail/${characters.id}`} >
+                    <ItemList data={characters} />
+                    </Link>
+                </div>
+            );    
+        })} 
         </div>
     );
-    
-    
-
-    
 }
 
 export default ItemListContainer
